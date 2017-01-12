@@ -38,5 +38,10 @@
     "sass-module-importer": "1.2.1",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0"
+  },
+  "dependencies": {
+    "angular": "^1.6.1",
+    "angular-ui-router": "^0.3.2",
+    "bulma": "^0.3.0"
   }
 }
