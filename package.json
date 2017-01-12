@@ -42,6 +42,7 @@
   "dependencies": {
     "angular": "^1.6.1",
     "angular-ui-router": "^0.3.2",
-    "bulma": "^0.3.0"
+    "bulma": "^0.3.0",
+    "imdb-api": "^2.2.1"
   }
 }
