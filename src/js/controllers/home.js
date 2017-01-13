@@ -6,4 +6,9 @@ function HomeController () {
     console.log("Home Controller Ran");
   }
 
+  init();
+
 }
+
+export { HomeController };
+
