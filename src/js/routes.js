@@ -3,7 +3,7 @@ function routerConfig ($stateProvider, $urlRouterProvider) {
     .state('root', {
       abstract: true,
       templateUrl: 'templates/layout.tpl.html',
-      controller: 'LayoutController as layout'
+      controller: 'LayoutController as search'
     })
     .state('root.home', {
       url: '/',

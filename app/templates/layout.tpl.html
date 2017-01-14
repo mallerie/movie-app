@@ -2,11 +2,14 @@
 
   <nav class="nav">
     <div class="nav-center">
-      <input type="search" name="search-text">
+      <form class="query-form" ng-submit="search.allMovies(query)">
+        <input class="search-field" type="search" name="search-text" ng-model="query">
+        
+      </form>
     </div>
   </nav>
 
   <div class="main-content" ui-view>
   </div>
-  
+
 </div>
