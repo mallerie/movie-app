@@ -1,5 +1,4 @@
-import { SERVER } from "../server";
-console.log(SERVER);
+import { MovieService } from "../services/movieservice";
 
 function HomeController (MovieService, $http) {
 
@@ -14,13 +13,6 @@ function HomeController (MovieService, $http) {
       vm.movies = resp.data.Search;
       console.log(vm.movies);
     });
-
-    // $http({
-    //   method: 'GET',
-    //   url: SERVER,
-    // }).then((resp) => {
-    //   console.log(resp.data);
-    //   });
 
   }
 

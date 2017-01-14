@@ -2,9 +2,14 @@
 
   <nav class="nav">
     <div class="nav-center">
-      <form class="query-form" ng-submit="search.allMovies(query)">
-        <input class="search-field" type="search" name="search-text" ng-model="query">
-        
+      <form class="query-form" ng-submit="home.allMovies(query)">
+        <input class="input" type="search" name="search-text" ng-model="query">
+        <div class="control is-grouped">
+        <p class="control">
+          <button class="button is-primary">Submit</button>
+        </p>
+
+        </div>
       </form>
     </div>
   </nav>

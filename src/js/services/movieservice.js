@@ -2,7 +2,8 @@ import { SERVER } from "../server";
 
 function MovieService ($http) {
 
-  this.allMovies = function (title) {
+  this.allMovies = function (query) {
+    console.log("allMovies ran!");
     return $http.get(SERVER);
   };
 
