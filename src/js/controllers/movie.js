@@ -6,9 +6,10 @@ function  MovieController (MovieService, $stateParams) {
   vm.movie = {};
 
   function init() {
-    MovieService.getMovie($stateParams.imdbID).then((resp) => {
+    MovieService.getMovie($stateParams.id).then((resp) => {
       vm.movie = resp.data;
     })
+    console.log("got movie");
   }
 
   init();

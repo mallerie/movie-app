@@ -11,7 +11,7 @@ function routerConfig ($stateProvider, $urlRouterProvider) {
       controller: 'HomeController as home'
     })
     .state('root.movie', {
-      url: '/movie/imdbID',
+      url: '/movie/:id',
       templateUrl: 'templates/movie.tpl.html',
       controller: 'MovieController as movie'
     })
