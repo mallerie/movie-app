@@ -10,6 +10,11 @@ function routerConfig ($stateProvider, $urlRouterProvider) {
       templateUrl: 'templates/home.tpl.html',
       controller: 'HomeController as home'
     })
+    .state('root.movie', {
+      url: '/movie/id',
+      templateUrl: 'templates/movie.tpl.html',
+      controller: 'MovieController as movie'
+    })
 
   $urlRouterProvider.otherwise('/');
 
