@@ -1,10 +1,19 @@
   
   <h1>Movie App</h1>
 
-  <a href="#!/movie">Go To Movie View</a>
+  <nav class="nav">
+    <div class="nav-center">
+      <form class="query-form" ng-submit="home.findMovies(query)">
+        <input class="input" type="search" name="search-text" ng-model="query" placeholder="Star Wars">
+        <div class="control is-grouped">
+        <p class="control">
+          <input type="submit" value="Find Movies">
+        </p>
 
-  <a href="#!/fake">Go To Fake View</a>
-
+        </div>
+      </form>
+    </div>
+  </nav>
 
   <ul>
       <li ng-repeat="movie in home.movies">

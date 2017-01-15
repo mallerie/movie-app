@@ -19,13 +19,12 @@ function HomeController (MovieService, $state) {
 
   init();
 
-  this.findMovies = function() {
-    console.log("find movies ran");
+  this.findMovies = function(query) {
 
     MovieService.searchMovies(query).then((resp) => {
       vm.movies = resp.data.Search;
       console.log("find movies ran");
-      $state.go('root.movie');
+      $state.go('root.home');
     });
     
   }
@@ -35,4 +34,3 @@ function HomeController (MovieService, $state) {
 
 HomeController.$inject = ['MovieService','$state'];
 export { HomeController };
-

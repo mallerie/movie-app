@@ -1,10 +1,12 @@
 
-function LayoutController () {
+function LayoutController (MovieService, $state) {
 
   let vm = this;
   
   console.log("LAYOUT CONTROLLER IS ALIVE");
+
+
 }
 
-LayoutController.$inject = [];
+LayoutController.$inject = ['MovieService', '$state'];
 export { LayoutController };

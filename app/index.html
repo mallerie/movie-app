@@ -11,6 +11,19 @@
   <body ng-app="app">
 
     <div class="container" ui-view></div>
+    
+    <script src="https://www.gstatic.com/firebasejs/3.6.5/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyCF8lW0AQKz-LUH9FgHLQ4d3q0Z0Jn_VjA",
+        authDomain: "movie-app-96200.firebaseapp.com",
+        databaseURL: "https://movie-app-96200.firebaseio.com",
+        storageBucket: "movie-app-96200.appspot.com",
+        messagingSenderId: "432243794231"
+      };
+      firebase.initializeApp(config);
+    </script>
     <script src="js/bundle.js"></script>
 
   </body>
