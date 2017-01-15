@@ -1,13 +1,14 @@
 import { MovieService } from "../services/movieservice";
 
-function HomeController (MovieService, $http) {
 
+function HomeController (MovieService, $state) {
   let vm = this;
 
   vm.movies = [];
 
+  vm.query = '';
+
   function init () {
-    console.log("Home Controller Ran");
 
     MovieService.initMovies().then((resp) => {
       vm.movies = resp.data.Search;
@@ -18,9 +19,20 @@ function HomeController (MovieService, $http) {
 
   init();
 
+  this.findMovies = function() {
+    console.log("find movies ran");
+
+    MovieService.searchMovies(query).then((resp) => {
+      vm.movies = resp.data.Search;
+      console.log("find movies ran");
+      $state.go('root.movie');
+    });
+    
+  }
 
 }
 
-HomeController.$inject = ['MovieService','$http'];
+
+HomeController.$inject = ['MovieService','$state'];
 export { HomeController };
 

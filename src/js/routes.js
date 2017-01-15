@@ -15,11 +15,6 @@ function routerConfig ($stateProvider, $urlRouterProvider) {
       templateUrl: 'templates/movie.tpl.html',
       controller: 'MovieController as movie'
     })
-    .state('root.fake', {
-      url: '/fake',
-      templateUrl: 'templates/fake.tpl.html',
-      // controller: 'MovieController as movie'
-    })
 
   $urlRouterProvider.otherwise('/');
 

@@ -8,7 +8,6 @@ function  MovieController (MovieService, $stateParams) {
   function init() {
     MovieService.getMovie($stateParams.imdbID).then((resp) => {
       vm.movie = resp.data;
-      console.log(resp.data, "<---This is the movie you clicked")
     })
     console.log("got movie");  }
 
