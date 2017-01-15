@@ -1,3 +1,3 @@
-const SERVER = "http://www.omdbapi.com/?s=Spider+Man&page=1"
+const SERVER = "http://www.omdbapi.com/?type=movie"
 
 export { SERVER };
