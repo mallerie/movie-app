@@ -43,6 +43,7 @@
     "angular": "^1.6.1",
     "angular-ui-router": "^0.3.2",
     "bulma": "^0.3.0",
+    "firebase": "^3.6.5",
     "imdb-api": "^2.2.1"
   }
 }
