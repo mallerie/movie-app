@@ -9,7 +9,7 @@ function HomeController (MovieService, $http) {
   function init () {
     console.log("Home Controller Ran");
 
-    MovieService.allMovies().then((resp) => {
+    MovieService.initMovies().then((resp) => {
       vm.movies = resp.data.Search;
       console.log(vm.movies);
     });

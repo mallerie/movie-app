@@ -8,6 +8,12 @@ function MovieService ($http) {
     return $http.get(url);
   };
 
+  this.initMovies = function () {
+    // console.log(query, "<----This is the query");
+    let url = SERVER + "&s=Star+Wars";
+    return $http.get(url);
+  };
+
   this.getMovie = function (id) {
     let url = SERVER + "&i=" + id;
     return $http.get(url);
