@@ -1,14 +1,17 @@
   
   <h1>Movie App</h1>
 
-   <a href="#/movie">Go To Movie View</a>
+  <a href="#!/movie">Go To Movie View</a>
+
+  <a href="#!/fake">Go To Fake View</a>
+
 
   <ul>
-    <a href="#/movie/{{ movie.imdbID }}">
       <li ng-repeat="movie in home.movies">
-      <p>{{movie.Title}}{{movie.Year}}</p>
+        <a href="#!/movie/{{ movie.imdbID }}">
+          <p>{{movie.Title}}{{movie.Year}}</p>
+        </a>  
       </li>
-    </a>  
   </ul>
 
 

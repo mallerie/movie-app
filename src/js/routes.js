@@ -11,9 +11,14 @@ function routerConfig ($stateProvider, $urlRouterProvider) {
       controller: 'HomeController as home'
     })
     .state('root.movie', {
-      url: '/movie/:id',
+      url: '/movie/:imdbID',
       templateUrl: 'templates/movie.tpl.html',
       controller: 'MovieController as movie'
+    })
+    .state('root.fake', {
+      url: '/fake',
+      templateUrl: 'templates/fake.tpl.html',
+      // controller: 'MovieController as movie'
     })
 
   $urlRouterProvider.otherwise('/');

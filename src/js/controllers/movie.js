@@ -6,16 +6,16 @@ function  MovieController (MovieService, $stateParams) {
   vm.movie = {};
 
   function init() {
-    MovieService.getMovie($stateParams.id).then((resp) => {
+    MovieService.getMovie($stateParams.imdbID).then((resp) => {
       vm.movie = resp.data;
+      console.log(resp.data, "<---This is the movie you clicked")
     })
-    console.log("got movie");
-  }
+    console.log("got movie");  }
 
   init();
 
 
 }
 
-MovieController.$inject = ['ContactService', '$stateParams'];
+MovieController.$inject = ['MovieService', '$stateParams'];
 export { MovieController };

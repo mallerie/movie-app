@@ -2,6 +2,13 @@
 
  <!-- <img ng-src=""> -->
 
- <h2>{{ movie.movie.Title }}</h2>
-
  <h2>Movie View here</h2>
+
+ <h2>{{ movie.movie.Title }}</h2>
+ <img ng-src="{{ movie.movie.Poster }}" alt="{{ movie.movie.Title }} Poster">
+ <h3>{{ movie.movie.Year }}</h3>
+ <h3>Starring: {{ movie.movie.Actors }}</h3>
+ <h3>{{ movie.movie.Country }}</h3>
+ <h3>IMDB Rating: {{ movie.movie.imdbRating }}</h3>
+ <h3>{{ movie.movie.Plot }}</h3>
+ <h3>Rated: {{ movie.movie.Rated }}</h3>

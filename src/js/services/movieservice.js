@@ -7,10 +7,10 @@ function MovieService ($http) {
     return $http.get(SERVER);
   };
 
-  // this.getMovie = function (id) {
-  //   let url = SERVER + id;
-  //   return $http.get(url);
-  // };
+  this.getMovie = function (id) {
+    let url = "http://www.omdbapi.com/?i=" + id;
+    return $http.get(url);
+  };
 
 }
 
