@@ -19,6 +19,11 @@ function MovieService ($http) {
     return $http.get(url);
   };
 
+  this.getFavorites = function () {
+    let url = "https://movie-app-96200.firebaseio.com/";
+    return $http.get(url);
+  }
+
 }
 
 MovieService.$inject = ['$http'];
