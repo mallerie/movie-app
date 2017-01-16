@@ -1,9 +1,11 @@
-function  MovieController (MovieService, $stateParams) {
+function  MovieController (MovieService, $stateParams, $firebaseArray) {
   console.log("Movie Controller ran succesfully");
 
   let vm = this;
 
   vm.movie = {};
+
+  let rootRef = firebase.database().ref();
 
   function init() {
     MovieService.getMovie($stateParams.imdbID).then((resp) => {
@@ -13,8 +15,12 @@ function  MovieController (MovieService, $stateParams) {
 
   init();
 
+  this.addToFavorites = function () {
+
+  }
+
 
 }
 
-MovieController.$inject = ['MovieService', '$stateParams'];
+MovieController.$inject = ['MovieService', '$stateParams', '$firebaseArray'];
 export { MovieController };

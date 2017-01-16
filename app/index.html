@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <script src="https://use.fontawesome.com/eb0a1dc914.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie App</title>
     <link rel="stylesheet" href="css/normalize.css">
@@ -11,20 +12,29 @@
   <body ng-app="app">
 
     <div class="container" ui-view></div>
-    
-    <script src="https://www.gstatic.com/firebasejs/3.6.5/firebase.js"></script>
-    <script>
-      // Initialize Firebase
-      var config = {
-        apiKey: "AIzaSyCF8lW0AQKz-LUH9FgHLQ4d3q0Z0Jn_VjA",
-        authDomain: "movie-app-96200.firebaseapp.com",
-        databaseURL: "https://movie-app-96200.firebaseio.com",
-        storageBucket: "movie-app-96200.appspot.com",
-        messagingSenderId: "432243794231"
-      };
-      firebase.initializeApp(config);
-    </script>
-    <script src="js/bundle.js"></script>
 
+    <!-- AngularJS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/3.6.5/firebase.js"></script>
+
+    <!-- AngularFire -->
+    <script src="https://cdn.firebase.com/libs/angularfire/2.2.0/angularfire.min.js"></script>
+
+    <script>
+    var config = {
+      apiKey: "AIzaSyCF8lW0AQKz-LUH9FgHLQ4d3q0Z0Jn_VjA",
+      authDomain: "movie-app-96200.firebaseapp.com",
+      databaseURL: "https://movie-app-96200.firebaseio.com",
+      storageBucket: "movie-app-96200.appspot.com",
+      messagingSenderId: "432243794231"
+    };
+
+    firebase.initializeApp(config);
+      
+    </script>
+
+    <script src="js/bundle.js"></script>
   </body>
 </html>

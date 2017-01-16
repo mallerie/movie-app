@@ -1,0 +1,23 @@
+<a href="#/">Go Home</a>  
+
+<ul class="columns is-multiline">
+  <li class="column is-4" ng-repeat="movie in home.movies">
+    <a href="#!/movie/{{ movie.imdbID }}">
+      <div class="tile is-parent">
+        <article class="tile is-child is-info">
+          <p class="title">{{ movie.Title }}</p>
+          <p class="subtitle">{{ movie.Year }}</p>
+          <figure class="image">
+            <img ng-src="{{ movie.Poster }}">
+          </figure>
+          <a class="button is-success">
+            <span class="icon is-small">
+              <i class="fa fa-check"></i>
+            </span>
+            <span>Save</span>
+          </a>
+        </article>
+      </div>
+    </a>         
+  </li>
+</ul>

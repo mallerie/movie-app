@@ -15,6 +15,11 @@ function routerConfig ($stateProvider, $urlRouterProvider) {
       templateUrl: 'templates/movie.tpl.html',
       controller: 'MovieController as movie'
     })
+    .state('root.favorites', {
+      url: '/favorites',
+      templateUrl: 'templates/favorites.tpl.html',
+      controller: 'FavoritesController as faves'
+    })
 
   $urlRouterProvider.otherwise('/');
 
