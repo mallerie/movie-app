@@ -8,7 +8,7 @@
     <div class="nav-right">
       <form class="query-form" ng-submit="home.findMovies(query)">
         <div class="control is-grouped">
-          <input class="input" type="search" name="search-text" ng-model="query" placeholder="Star Wars">
+          <input class="input" type="text" name="search-text" ng-model="query" placeholder="Star Wars">
           <p class="control">
             <button class="button is-primary" type="submit" value="Find Movies">Submit</button>
           </p>
@@ -28,12 +28,12 @@
             <figure class="image">
               <img ng-src="{{ movie.Poster }}">
             </figure>
-            <a class="button is-success">
+            <button ng-click="home.addNewFavorite(movie)" class="button is-success">
               <span class="icon is-small">
                 <i class="fa fa-check"></i>
               </span>
               <span>Save</span>
-            </a>
+            </button>
           </article>
         </div>
       </a>         

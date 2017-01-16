@@ -5,7 +5,6 @@ function  MovieController (MovieService, $stateParams, $firebaseArray) {
 
   vm.movie = {};
 
-  let rootRef = firebase.database().ref();
 
   function init() {
     MovieService.getMovie($stateParams.imdbID).then((resp) => {
@@ -14,10 +13,6 @@ function  MovieController (MovieService, $stateParams, $firebaseArray) {
     console.log("got movie");  }
 
   init();
-
-  this.addToFavorites = function () {
-
-  }
 
 
 }

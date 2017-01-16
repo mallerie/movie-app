@@ -5,7 +5,6 @@ function  FavoritesController (MovieService, $stateParams, $firebaseArray) {
 
   vm.movie = {};
 
-  let rootRef = firebase.database().ref();
 
   function init() {
 
