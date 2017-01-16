@@ -8,7 +8,12 @@ function HomeController (MovieService, $state, $firebaseArray) {
 
   vm.query = '';
 
-  let ref = firebase.database().ref();
+  // const ROOTREF = firebase.database.ref('movies');
+  // const REF = ROOTREF.child('favorites');
+  // vm.favorites = $firebaseArray(ref);
+
+
+  let ref = firebase.database().ref().child('favorites');
   let database = firebase.database();
   vm.favorites = $firebaseArray(ref);
 
@@ -17,7 +22,6 @@ function HomeController (MovieService, $state, $firebaseArray) {
 
     MovieService.initMovies().then((resp) => {
       vm.movies = resp.data.Search;
-      console.log(vm.movies);
     });
 
   }
@@ -27,30 +31,33 @@ function HomeController (MovieService, $state, $firebaseArray) {
   this.findMovies = function(query) {
     MovieService.searchMovies(query).then((resp) => {
       vm.movies = resp.data.Search;
-      console.log("find movies ran");
       $state.go('root.home');
     });
   }
 
   this.addNewFavorite = function (movie) {
-    console.log("Adding favorite...");
-    let data = {
-      Title: this.Title,
-      Poster: this.Poster,
-      Year: this.Year,
-      imdbID: this.imdbID
-      // Title: "movie title",
-      // Poster: "this.Poster",
-      // Year: "this.Year",
-      // imdbID: "this.imdbID"
-    };
+
+    let favorites = $firebaseArray(ref);
+    favorites.$add({ 
+        Title: movie.Title,
+        Poster: movie.Poster,
+        Year: movie.Year,
+        imdbID: movie.imdbID
+      }).then(function(ref) {
+      var id = ref.key;
+      console.log("added record with id " + id);
+      favorites.$indexFor(id); // returns location in the array
+
+      // this.favorites = favorites;
+    });
 
     // Get a key for a new Post.
-    let favorites = {};
-    let newPostKey = database.ref().child('movie').push(data).key;
-    console.log(newPostKey);
-    console.log(favorites);
-    return database.ref().update(favorites);
+    // let favorites = {};
+    // let newPostKey = database.ref().child('favorites').push(data).key;
+    // console.log(newPostKey);
+    // $state.go('root.favorites');
+    // console.log(favorites);
+    // return database.ref().update(favorites);
 
   }
 

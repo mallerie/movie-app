@@ -3,11 +3,18 @@ function  FavoritesController (MovieService, $stateParams, $firebaseArray) {
 
   let vm = this;
 
-  vm.movie = {};
+  // vm.movie = {};
+  let ref = firebase.database().ref();
+  let database = firebase.database();
+  vm.favorites = $firebaseArray(ref);
+
 
 
   function init() {
-
+    return ref.once('value').then(function(snapshot) {
+    var favorites = snapshot.val().favorites;
+    console.log(favorites);
+    });
   }
 
   init();
