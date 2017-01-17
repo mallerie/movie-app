@@ -1,6 +1,8 @@
 
 @import 'bulma';
 
+$blue: #4285F4;
+
 * {
   box-sizing: border-box;
 }
@@ -12,3 +14,82 @@
 h1 {
   font-size: 3em;
 }
+
+nav {
+  a {
+    font-size: 1.5em;
+    color: $blue;
+  }
+  .button {
+    background-color: $blue;
+    color: #FFF;
+  }
+}
+
+.tile {
+  border-radius: 10px;
+  .title {
+    font-size: 1em;
+  }
+  .title-wrapper {
+    height: 2em;
+  }
+  img {
+    height: 18em;
+  }
+  .subtitle {
+    height: 1em;
+    margin: .5em;
+  }
+  .button {
+    margin: 0.5em auto;
+    float: right;
+  }
+}
+
+// .image-wrapper, .info-wrapper {
+//   display: inline;
+// }
+
+.image-wrapper {
+  float: left;
+  img {
+    width: 80%;
+    margin: 1em;
+  }
+}
+
+.info-wrapper {
+  float: right;
+  margin: 1em;
+  width: 50%;
+}
+
+h2 {
+  font-size: 2em;
+  color: $blue;
+}
+
+.blue {
+  color: $blue;
+  margin: 0 0 0 1.5em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

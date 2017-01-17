@@ -10,7 +10,7 @@
         <div class="control is-grouped">
           <input class="input" type="text" name="search-text" ng-model="query" placeholder="Star Wars">
           <p class="control">
-            <button class="button is-primary" type="submit" value="Find Movies">Submit</button>
+            <button class="button" type="submit" value="Find Movies">Search</button>
           </p>
 
         </div>
@@ -19,11 +19,13 @@
   </nav>
 
   <ul class="columns is-multiline">
-    <li class="column is-4" ng-repeat="movie in home.movies">
+    <li class="column is-3" ng-repeat="movie in home.movies">
       <a href="#!/movie/{{ movie.imdbID }}">
         <div class="tile is-parent">
           <article class="tile is-child is-info">
-            <p class="title">{{ movie.Title }}</p>
+            <div class="title-wrapper">
+              <p class="title">{{ movie.Title }}</p>
+            </div>
             <p class="subtitle">{{ movie.Year }}</p>
             <figure class="image">
               <img ng-src="{{ movie.Poster }}">

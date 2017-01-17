@@ -1,11 +1,22 @@
- <a href="#/">Go Home</a>
+<div>
+  <a class="blue" href="#/">Go Back</a>
+</div>
 
- <h2>{{ movie.movie.Title }}</h2>
- <img ng-src="{{ movie.movie.Poster }}" alt="{{ movie.movie.Title }} Poster">
- <h3>{{ movie.movie.Year }}</h3>
- <h3>Starring: {{ movie.movie.Actors }}</h3>
- <h3>Runtime: {{ movie.movie.Runtime }}</h3>
- <h3>{{ movie.movie.Country }}</h3>
- <h3>IMDB Rating: {{ movie.movie.imdbRating }}</h3>
- <h3>{{ movie.movie.Plot }}</h3>
- <h3>Rated: {{ movie.movie.Rated }}</h3>
+<div>
+
+  <div class="image-wrapper">
+    <img ng-src="{{ movie.movie.Poster }}" alt="{{ movie.movie.Title }} Poster">
+  </div>
+
+  <div class="info-wrapper">
+    <h2>{{ movie.movie.Title }}</h2>
+    <h3>{{ movie.movie.Year }}</h3>
+    <h3>{{ movie.movie.Country }}</h3>
+    <h3>Starring: {{ movie.movie.Actors }}</h3>
+    <h3>Runtime: {{ movie.movie.Runtime }}</h3>
+    <h3>{{ movie.movie.Plot }}</h3>
+    <h3>IMDB Rating: {{ movie.movie.imdbRating }}</h3>
+    <h3>Rated: {{ movie.movie.Rated }}</h3>
+  </div>
+  
+</div>
