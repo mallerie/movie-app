@@ -3,7 +3,7 @@ function  FavoritesController (MovieService, $stateParams, $firebaseArray) {
 
   let vm = this;
 
-
+  vm.favorites = {};
 
   // let ref = firebase.database().ref();
   // let database = firebase.database();
@@ -18,25 +18,18 @@ function  FavoritesController (MovieService, $stateParams, $firebaseArray) {
   // console.log("current ref is: ", newRef);
 
   vm.favorites = $firebaseArray(newRef);
-  // console.log("favorites is: ", vm.favorites);
+  console.log("favorites is: ", vm.favorites);
 
 
 
   function init() {
-    MovieService.getFavorites().then((resp) => {
-      console.log(resp);
-    })
+    // Still figuring out how to read data from firebase.
+    
+
   }
 
   init();
 
-
-
-
-    // return ref.once('value').then(function(snapshot) {
-    // var favorites = snapshot.val().favorites;
-    // console.log(favorites);
-    // });
 }
 
 FavoritesController.$inject = ['MovieService', '$stateParams', '$firebaseArray'];
