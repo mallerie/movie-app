@@ -1,7 +1,7 @@
 # Installation
 
 #### View Live Version at:
-tiy-mallerie-movie-app.surge.sh 
+mallerie-movie-app.surge.sh 
 
 #### Prerequisites
 
