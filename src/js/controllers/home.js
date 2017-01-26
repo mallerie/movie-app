@@ -4,14 +4,7 @@ import { MovieService } from "../services/movieservice";
 function HomeController (MovieService, $state, $firebaseArray) {
   let vm = this;
 
-  vm.movies = [];
-
-  vm.query = '';
-
   let ref = firebase.database().ref().child('favorites');
-  let database = firebase.database();
-  vm.favorites = $firebaseArray(ref);
-
 
   function init () {
 
@@ -39,20 +32,8 @@ function HomeController (MovieService, $state, $firebaseArray) {
         Year: movie.Year,
         imdbID: movie.imdbID
       }).then(function(ref) {
-      var id = ref.key;
-      console.log("added record with id " + id);
-      favorites.$indexFor(id); // returns location in the array
-
-      // this.favorites = favorites;
+      $state.go('root.favorites');
     });
-
-    // Get a key for a new Post.
-    // let favorites = {};
-    // let newPostKey = database.ref().child('favorites').push(data).key;
-    // console.log(newPostKey);
-    // $state.go('root.favorites');
-    // console.log(favorites);
-    // return database.ref().update(favorites);
 
   }
 
