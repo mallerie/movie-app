@@ -6,10 +6,10 @@
   <li class="column is-4" ng-repeat="favorite in faves.favorites">
       <div class="tile is-parent">
         <article class="tile is-child is-info">
-          <p class="title">{{ favorite.movie.Title }}</p>
-          <p class="subtitle">{{ favorite.movie.Year }}</p>
+          <p class="title">{{ favorite.Title }}</p>
+          <p class="subtitle">{{ favorite.Year }}</p>
           <figure class="image">
-            <img ng-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-_hZ33_Q2cXXEgniHOvOPwZRvlwbGhCwSeYhRaWbXgvrirR9aLQ">
+            <img ng-src="{{ favorite.Poster }}">
           </figure>
         </article>
       </div>

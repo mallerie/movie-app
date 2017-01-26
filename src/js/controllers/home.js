@@ -8,11 +8,6 @@ function HomeController (MovieService, $state, $firebaseArray) {
 
   vm.query = '';
 
-  // const ROOTREF = firebase.database.ref('movies');
-  // const REF = ROOTREF.child('favorites');
-  // vm.favorites = $firebaseArray(ref);
-
-
   let ref = firebase.database().ref().child('favorites');
   let database = firebase.database();
   vm.favorites = $firebaseArray(ref);

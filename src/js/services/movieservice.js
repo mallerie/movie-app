@@ -20,7 +20,7 @@ function MovieService ($http) {
   };
 
   this.getFavorites = function () {
-    let url = "https://movie-app-96200.firebaseio.com/";
+    let url = "https://movie-app-96200.firebaseio.com/favorites";
     return $http.get(url);
   }
 
