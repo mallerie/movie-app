@@ -1,7 +1,6 @@
+$blue: #4285F4;
 
 @import 'bulma';
-
-$blue: #4285F4;
 
 * {
   box-sizing: border-box;
@@ -13,6 +12,21 @@ $blue: #4285F4;
 
 h1 {
   font-size: 3em;
+}
+
+@media (max-width: 500px) {
+  .tile {
+    .is-parent {
+      padding: 4rem 2.5rem;
+    }
+    .is-child {
+      min-height: 26rem;
+
+    }
+  }
+  .column {
+    padding: 2.75rem;
+  }
 }
 
 nav {
